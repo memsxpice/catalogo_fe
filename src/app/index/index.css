@@ -1,0 +1,14 @@
+body {
+  background-image: url("/assets/img/light-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+ footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
