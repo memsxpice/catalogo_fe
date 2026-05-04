@@ -15,5 +15,10 @@ const routeConfig: Routes = [
     component: Movies,
     title: 'Movies',
   },
+  {
+    path: 'movie',
+    component: Movie,
+    title: 'Movie',
+  },
 ];
 export default routeConfig;
