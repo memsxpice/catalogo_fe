@@ -23,8 +23,5 @@ export class HttpServiceService {
     return this._http.get<any>(this.apiUrl + '/api/getPeliculas');
   }
 
-  getMovie(): Observable<any> {
-    return this._http.get<any>(this.apiUrl + '/api/getPeliculas/10');
-  }
 
 }
