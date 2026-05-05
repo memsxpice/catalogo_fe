@@ -36,19 +36,26 @@
         <div id="body" class="row">
             <div class="container text-center">
                 <div class="row row-cols-4">
-                    @for (item of items; track item.nombre){
+                    <!-- @for (item of items; track item.title){
                         <div class="col">
-                            <p>Titulo: {{item.nombre}}</p>
-                            <p><img src="" alt="imagenPelicula"></p>
-                            <button type="button" class="btn btn-success" routerLink="/movie">Ver mas</button>
+                            <p>Titulo: {{item.title}}</p>
+                            <p>Año: {{item.year}}</p>
+                            <p><img src="" alt={{item.cover}}></p>
+                            <button type="button" class="btn btn-success" routerLink="/movie" [value]=item.id>Ver mas</button>
                             <br>
                             <br>
                             <br>
                         </div>
-                        
-                    } @empty {
-                        <p>nada</p>
-                    }
+                    }  -->
+
+                    @for (item of items; track item.title){
+                        <form action="" method="get">
+                            <label>Titulo: {{item.title}}</label>
+                            <label>Año: {{item.year}}</label><br>
+                            <button type="button" class="btn btn-success" routerLink="/movie" [value]=item.id>Ver mas</button>
+                        </form>
+                        <br>
+                    } 
                 </div>
             </div>
         </div>

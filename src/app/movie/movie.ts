@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-movie',
@@ -7,4 +8,23 @@ import {RouterLink, RouterOutlet} from '@angular/router';
   templateUrl: './movie.html',
   styleUrl: './movie.css',
 })
-export class Movie {}
+export class Movie implements OnInit{
+   items:any;
+
+  constructor(
+    private httpservService: HttpServiceService
+  ) {}
+
+  ngOnInit() {
+    
+    this.httpservService.getMovie()
+      .subscribe(data => {
+        this.items = data;
+        console.log(data);
+        
+    })
+
+    
+    
+  }
+}

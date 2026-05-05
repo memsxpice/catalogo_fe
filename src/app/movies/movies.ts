@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
+import { HttpServiceService } from '../http-service.service';
 
 @Component({
   selector: 'app-movies',
@@ -7,22 +8,25 @@ import {RouterLink, RouterOutlet} from '@angular/router';
   templateUrl: './movies.html',
   styleUrl: './movies.css',
 })
-export class Movies {
-    items:any;
+export class Movies implements OnInit{
+  
+  items:any;
 
-  constructor() {
-    
-   }
+  constructor(
+    private httpservService: HttpServiceService
+  ) {}
 
   ngOnInit() {
-    this.items = [
-      {nombre:'peli1'},
-      {nombre:'peli2'},
-      {nombre:'peli3'},
-      {nombre:'peli4'},
-      {nombre:'peli5'},
-      {nombre:'peli6'},
-      {nombre:'peli7'},
-    ]
+    
+    this.httpservService.getMovies()
+      .subscribe(data => {
+        this.items = data;
+        console.log(data);
+        
+    })
+
+    
+    
   }
 }
+
