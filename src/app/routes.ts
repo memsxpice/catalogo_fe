@@ -16,7 +16,7 @@ const routeConfig: Routes = [
     title: 'Movies',
   },
   {
-    path: 'movie',
+    path: 'movie/:id',
     component: Movie,
     title: 'Movie',
   },
