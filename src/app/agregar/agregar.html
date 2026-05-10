@@ -34,33 +34,30 @@
         </div>
 
         <div id="body" class="row">
-            <div class="container text-center">     
+            <div class="container text-center">      
                 <div class="row">
-                    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-                        <p>
-                        <label for="id">ID:</label>
-                        <input type="text" formControlName="id" id="id" value={{items.id}} readonly>
-                        </p>
+                    <form action="">
+                        
                         <p>
                         <label for="title">Titulo:</label>
-                        <input type="text" formControlName="title" id="title" value={{items.title}}>
+                        <input type="text" name="title" id="title">
                         </p>
                         <br>
                         <p>
                         <label for="synopsis">Sinopsis:</label>
-                        <input type="text" formControlName="synopsis" id="synopsis" value={{items.synopsis}}>
+                        <input type="text" name="synopsis" id="synopsis" >
                         </p>
                         <br>
                         <p>
                         <label for="year">Año</label>
-                        <input type="text" formControlName="year" id="year" value={{items.year}}>
+                        <input type="text" name="year" id="year" >
                         </p>
                         <br>
                         <p>
                         <label for="cover">Cover</label>
-                        <input type="text" formControlName="cover" id="cover" value={{items.cover}}>
+                        <input type="text" name="cover" id="cover" >
                         </p>
-                        <p><button type="submit" class="btn btn-success">Actualizar</button></p>
+                        <p><button type="button" class="btn btn-success">Agregar</button></p>
                     </form>
                 </div>
             </div>
