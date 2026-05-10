@@ -39,6 +39,17 @@ export class HttpServiceService {
     return this._http.put<any>(this.apiUrl + '/api/putPeliculas/'+rows, '');
   }
 
+  addMovie(rows:any): Observable<any> {
+    //const headers = {'Content-Type':'application/json'}
+    //const body = JSON.stringify(rows)
+    //console.log(body);
+    //console.log(rows);
+    
+
+    //return this._http.put<any>(this.apiUrl + '/api/putPeliculas/', body, this.httpOptions);
+    return this._http.post<any>(this.apiUrl + '/api/postPeliculas', rows);
+  }
+
 }
 
 

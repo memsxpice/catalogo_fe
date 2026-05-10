@@ -49,14 +49,14 @@ export class Movie{
 
   onSubmit(movieData:any){
     
-    console.log(movieData);
+    //console.log(movieData);
     //aqui hay que parsear movieData
 
     //http://127.0.0.1:8000/api/putPeliculas/1?title=Inception&synopsis=Pelicula de accion&year=2016&cover=imagenes.jpg
     
     movieData = this.productId + '?title=' + movieData.title + '&synopsis=' + movieData.synopsis + '&year=' + movieData.year + '&cover=' + movieData.cover;
 
-    console.log(movieData);
+    //console.log(movieData);
 
     this.httpservService.updateMovie(movieData)
       .subscribe(data => {

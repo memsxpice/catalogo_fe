@@ -36,28 +36,28 @@
         <div id="body" class="row">
             <div class="container text-center">      
                 <div class="row">
-                    <form action="">
+                    <form [formGroup]="checkoutForm2" (ngSubmit)="onSubmit(checkoutForm2.value)">
                         
                         <p>
                         <label for="title">Titulo:</label>
-                        <input type="text" name="title" id="title">
+                        <input type="text" formControlName="title" id="title">
                         </p>
                         <br>
                         <p>
                         <label for="synopsis">Sinopsis:</label>
-                        <input type="text" name="synopsis" id="synopsis" >
+                        <input type="text" formControlName="synopsis" id="synopsis" >
                         </p>
                         <br>
                         <p>
                         <label for="year">Año</label>
-                        <input type="text" name="year" id="year" >
+                        <input type="text" formControlName="year" id="year" >
                         </p>
                         <br>
                         <p>
                         <label for="cover">Cover</label>
-                        <input type="text" name="cover" id="cover" >
+                        <input type="text" formControlName="cover" id="cover" >
                         </p>
-                        <p><button type="button" class="btn btn-success">Agregar</button></p>
+                        <p><button type="submit" class="btn btn-success">Agregar</button></p>
                     </form>
                 </div>
             </div>
