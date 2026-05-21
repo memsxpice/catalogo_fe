@@ -10,7 +10,8 @@ import { InsertMovie } from './insertData';
 
 export class HttpServiceService {
 
-  apiUrl = 'http://127.0.0.1:8000';
+  //apiUrl = 'http://127.0.0.1:8000';
+  apiUrl = 'https://catalogobe-production.up.railway.app';
 
   constructor(private _http: HttpClient) { }
 
@@ -34,6 +35,10 @@ export class HttpServiceService {
 
   addMovie(rows:any): Observable<any> {
     return this._http.post<any>(this.apiUrl + '/api/postPeliculas', rows);
+  }
+
+  delMovie(rows:any): Observable<any> {
+    return this._http.delete<any>(this.apiUrl + '/api/deletePeliculas/'+rows);
   }
 
 }

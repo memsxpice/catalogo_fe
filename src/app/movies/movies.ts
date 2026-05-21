@@ -28,5 +28,20 @@ export class Movies implements OnInit{
     })
   }
 
+  onSubmit(movieData:any){
+
+    const isConfirmed = window.confirm("Are you sure you want to proceed?");
+    if (isConfirmed) {
+      console.log("Confirmed!");
+      this.httpservService.delMovie(movieData)
+      .subscribe(data => {
+        this.cdr.detectChanges();
+      })
+    } else {
+      console.log("Cancelled.");
+    }
+    
+  }
+
 }
 

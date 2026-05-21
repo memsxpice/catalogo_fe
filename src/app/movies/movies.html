@@ -43,7 +43,7 @@
                             <p>Año: {{item.year}}</p>
                             <p><img src="" alt={{item.cover}}></p>
                             <button type="button" class="btn btn-success" routerLink="/movie/{{item.id}}" [value]=item.id>Ver mas</button>
-                            <br>
+                            <button type="button" class="btn btn-danger" (click)="onSubmit(item.id)">Borrar</button>
                             <br>
                             <br>
                         </div>
