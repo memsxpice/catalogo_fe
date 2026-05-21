@@ -30,9 +30,9 @@ export class Movies implements OnInit{
 
   onSubmit(movieData:any){
 
-    const isConfirmed = window.confirm("Are you sure you want to proceed?");
+    const isConfirmed = window.confirm("Seguro que deseas borrar esta pelicula?");
     if (isConfirmed) {
-      console.log("Confirmed!");
+      //console.log("Confirmed!");
       this.httpservService.delMovie(movieData)
       .subscribe(data => {
         this.cdr.detectChanges();

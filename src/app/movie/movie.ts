@@ -29,7 +29,7 @@ export class Movie{
       title: '',
       synopsis: '',
       year: 0,
-      cover: '',
+      cover: 'cover.jpg',
     });
 
   }
@@ -48,6 +48,8 @@ export class Movie{
   }
 
   onSubmit(movieData:any){
+    window.alert('Registro actualizado.');
+    
     movieData = this.productId + '?title=' + movieData.title + '&synopsis=' + movieData.synopsis + '&year=' + movieData.year + '&cover=' + movieData.cover;
 
     this.httpservService.updateMovie(movieData)

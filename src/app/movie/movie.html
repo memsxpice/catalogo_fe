@@ -33,7 +33,7 @@
             </nav>
         </div>
 
-        <div id="body" class="row">
+        <div class="row">
             <div class="container text-center">     
                 <div class="row">
                     <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
@@ -41,32 +41,61 @@
                         <label for="id">ID:</label>
                         <input type="text" formControlName="id" id="id" value={{items.id}} readonly>
                         </p>
+
                         <p>
-                        <label for="title">Titulo:</label>
-                        <input type="text" formControlName="title" id="title" value={{items.title}}>
+                        <label for="title">Titulo: {{items.title}}</label> 
+                        </p>
+                        <p>Nuevo Titulo:
+                        <input type="text" formControlName="title" id="title">
                         </p>
                         <br>
+
                         <p>
-                        <label for="synopsis">Sinopsis:</label>
-                        <input type="text" formControlName="synopsis" id="synopsis" value={{items.synopsis}}>
+                        <label for="synopsis">Sinopsis: {{items.synopsis}}</label>
                         </p>
+                        <p>Nueva sinopsis: 
+                        <input type="text" formControlName="synopsis" id="synopsis">
+                        </p>
+
                         <br>
                         <p>
-                        <label for="year">Año</label>
-                        <input type="text" formControlName="year" id="year" value={{items.year}}>
+                        <label for="year">Año: {{items.year}}</label>
                         </p>
-                        <br>
+                        <p>Nuevo año:
+                        <input type="text" formControlName="year" id="year">
+                        </p>
+
+                        <!-- <br>
                         <p>
                         <label for="cover">Cover</label>
                         <input type="text" formControlName="cover" id="cover" value={{items.cover}}>
-                        </p>
+                        </p> -->
                         <p><button type="submit" class="btn btn-success">Actualizar</button></p>
                     </form>
                 </div>
             </div>
         </div>
 
-
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div id="footer" class="row">
             <footer class="fixed-bottom">
                 <p>© 2026 Memovie. All rights reserved.</p>
